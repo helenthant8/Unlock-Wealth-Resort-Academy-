@@ -12,13 +12,6 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .green-glow { box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); }
         .text-gradient { background: linear-gradient(to right, #22c55e, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Styling the Google Translate Widget to be less intrusive */
-        #google_translate_element { margin-right: 10px; }
-        .goog-te-gadget-simple { background-color: transparent !important; border: 1px solid rgba(255,255,255,0.1) !important; padding: 4px 8px !important; border-radius: 8px !important; }
-        .goog-te-gadget-simple span { color: #94a3b8 !important; font-size: 12px !important; }
-        .goog-te-banner-frame.skiptranslate { display: none !important; } 
-        body { top: 0px !important; }
     </style>
 </head>
 <body class="text-slate-200 antialiased">
@@ -26,23 +19,35 @@
     <header class="sticky top-0 z-50 glass border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="https://i.imgur.com/your-logo-placeholder.png" alt="Logo" class="w-10 h-10 object-contain"> <span class="font-bold tracking-tighter text-lg uppercase italic hidden sm:block">Unlock Wealth</span>
+                <img src="https://i.imgur.com/your-logo-placeholder.png" alt="Logo" class="w-10 h-10 object-contain"> 
+                <span class="font-bold tracking-tighter text-lg uppercase italic hidden sm:block">Unlock Wealth</span>
             </div>
             
-            <div class="flex items-center gap-4">
-                <div id="google_translate_element"></div>
+            <div class="flex items-center gap-6">
+                
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-sm font-medium text-slate-300 hover:text-green-400 transition-colors focus:outline-none">
+                        🌐 EN 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-36 bg-slate-900 border border-slate-700 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+                        <a href="index.html" class="block px-4 py-2 text-sm text-green-400 bg-slate-800/50 hover:bg-slate-800 transition-colors">🇬🇧 English</a>
+                        <a href="my.html" class="block px-4 py-2 text-sm text-slate-300 hover:bg-slate-800 hover:text-green-400 transition-colors">🇲🇲 မြန်မာ (MY)</a>
+                    </div>
+                </div>
                 
                 <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-400">
                     <a href="#journey" class="hover:text-green-400 transition-colors">Journey</a>
                     <a href="#mentors" class="hover:text-green-400 transition-colors">Mentors</a>
+                    <a href="login.html" class="hover:text-green-400 transition-colors">Login</a>
                 </nav>
-                <button class="bg-green-500 text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-green-400 transition-all">ENROLL</button>
+                <button class="bg-green-500 text-black px-5 py-2 rounded-full text-xs font-bold hover:bg-green-400 transition-all green-glow">ENROLL</button>
             </div>
         </div>
     </header>
 
     <section class="relative pt-32 pb-20 px-6">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-green-500/10 blur-[120px] rounded-full"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-green-500/10 blur-[120px] rounded-full pointer-events-none"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 Master your Mind. <br/>
@@ -97,8 +102,8 @@
                 <p class="text-slate-500 mono text-sm">7 Experts. 1 Unified Vision.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="glass p-6 rounded-2xl text-center group hover:border-green-500 transition-all">
-                    <div class="w-24 h-24 bg-slate-800 rounded-full mx-auto mb-4 border-2 border-green-500/20"></div>
+                <div class="glass p-6 rounded-2xl text-center group hover:border-green-500 transition-all cursor-pointer">
+                    <div class="w-24 h-24 bg-slate-800 rounded-full mx-auto mb-4 border-2 border-green-500/20 group-hover:border-green-500 transition-all"></div>
                     <h4 class="font-bold text-lg">Dr. Aris</h4>
                     <p class="text-green-400 text-xs mono mb-3">Sound Healing Master</p>
                     <p class="text-slate-400 text-xs italic">Optimizing neural pathways through frequency.</p>
@@ -143,6 +148,9 @@
     <footer class="py-10 text-center border-t border-white/5 opacity-50 text-[10px] mono tracking-widest uppercase">
         © 2026 Unlock Wealth Resort Academy @Helen Thant
     </footer>
+
+</body>
+</html>
 
    
     
