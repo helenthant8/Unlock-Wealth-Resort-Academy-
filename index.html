@@ -309,44 +309,7 @@
         © 2026 Unlock Wealth Resort Academy @Helen Thant
     </footer>
 
-    <script>
-        const audio = document.getElementById("healingSound");
-        const btn = document.getElementById("soundToggle");
-        let isPlaying = false;
 
-        function toggleSound() {
-            if (isPlaying) {
-                audio.pause();
-                btn.classList.remove("text-blue-500");
-                btn.classList.add("text-slate-600");
-            } else {
-                audio.volume = 0.4; 
-                audio.play();
-                btn.classList.remove("text-slate-600");
-                btn.classList.add("text-blue-500"); 
-            }
-            isPlaying = !isPlaying;
-        }
-    </script>
-</body>
-</html>");
-        const btn = document.getElementById("soundToggle");
-        let isPlaying = false;
-
-        function toggleSound() {
-            if (isPlaying) {
-                audio.pause();
-                btn.classList.remove("text-blue-500");
-                btn.classList.add("text-slate-600");
-            } else {
-                // Adjust volume (0.0 to 1.0) so it's a pleasant background ambient sound
-                audio.volume = 0.4; 
-                audio.play();
-                btn.classList.remove("text-slate-600");
-                btn.classList.add("text-blue-500"); // Turns blue when active
-            }
-            isPlaying = !isPlaying;
-        }
-    </script>
 </body>
 </html>
+    
